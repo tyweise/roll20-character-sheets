@@ -96,16 +96,18 @@
                 OCC Skills
                 <table>
                     <tr>
-                        <td class="sheet-TableHeader" style="width:60%;">Name</td>
-                        <td class="sheet-TableHeader" style="width:13%;">Base</td>
-                        <td class="sheet-TableHeader" style="width:13%;">PerLvl</td>
+                        <td class="sheet-TableHeader" style="width:50%;">Name</td>
+                        <td class="sheet-TableHeader" style="width:10%;">Base</td>
+                        <td class="sheet-TableHeader" style="width:11%;">+Lvl</td>
                         <td class="sheet-TableHeader" style="width:14%;">Total</td>
+                        <td class="sheet-TableHeader" style="width:15%;">Roll</td>
                     </tr>
                 </table>
                 <table style="border: 1px solid grey;">
                     <tr>
                         <fieldset class="repeating_OCCSK">
-                            <input float="left" type="text" style="width:60%;" name="attr_OCCSK"><input float="left" type="number" style="width:13%;" name="attr_OCCSKP" value=0><input float="left" type="number" style="width:13%;" name="attr_OCCSKPL" value = 0><input float="left" type="text" style="width:14%;" name="attr_OCCT" value="@{OCCSKP}+(@{OCCSKPL}*(@{Level}-1))+@{IQmax}" disabled="true">
+                            <input float="left" type="text" style="width:50%;" name="attr_OCCSK"><input float="left" type="number" style="width:10%;" name="attr_OCCSKP" value=0><input float="left" type="number" style="width:11%;" name="attr_OCCSKPL" value = 0><input float="left" type="text" style="width:14%;" name="attr_OCCT" value="@{OCCSKP}+(@{OCCSKPL}*(@{Level}-1))+@{IQmax}" disabled="true">
+                            <button type='roll' style="width:8%;" value='&{template:default} {{name=@{OCCSK} check}} {{skill level=[[@{OCCT}]]}} {{result=[[1d100]]}}' name='roll_OCCSK'></button>
                         </fieldset>
                     </tr>
                 </table>
@@ -114,16 +116,17 @@
                 OCC Related Skills
                 <table>
                     <tr>
-                        <td class="sheet-TableHeader" style="width:60%;">Name</td>
-                        <td class="sheet-TableHeader" style="width:12%;" >Base</td>
-                        <td class="sheet-TableHeader" style="width:12%;">PerLvl</td>
+                        <td class="sheet-TableHeader" style="width:50%;">Name</td>
+                        <td class="sheet-TableHeader" style="width:10%;">Base</td>
+                        <td class="sheet-TableHeader" style="width:11%;">+Lvl</td>
                         <td class="sheet-TableHeader" style="width:14%;">Total</td>
+                        <td class="sheet-TableHeader" style="width:15%;">Roll</td>
                     </tr>
                 </table>
                 <table style="border: 1px solid grey;">
                     <tr>
                         <fieldset class="repeating_OCRCSK">
-                            <input float="left" type="text" style="width:60%;" name="attr_OCRCSK"><input float="left" type="number" style="width:13%;" name="attr_OCRCSKP" value=0><input float="left" type="number" style="width:13%;" name="attr_OCRCSKPL" value = 0><input float="left" type="text" style="width:14%;" name="attr_OCRCT" value="@{OCRCSKP}+(@{OCRCSKPL}*(@{Level}-1))+@{IQmax}" disabled="true">
+                            <input float="left" type="text" style="width:50%;" name="attr_OCRCSK"><input float="left" type="number" style="width:10%;" name="attr_OCRCSKP" value=0><input float="left" type="number" style="width:11%;" name="attr_OCRCSKPL" value = 0><input float="left" type="text" style="width:14%;" name="attr_OCRCT" value="@{OCRCSKP}+(@{OCRCSKPL}*(@{Level}-1))+@{IQmax}" disabled="true"><button type='roll' style="width:8%;" value='@{OCRCSK} check (@{OCRCT})\nResult: [[1d100]]' name='roll_OCRCSK'/>
                         </fieldset>
                     </tr>
                 </table>
@@ -132,16 +135,17 @@
                 Secondary Skills
                 <table>
                     <tr>
-                        <td class="sheet-TableHeader" style="width:60%;">Name</td>
-                        <td class="sheet-TableHeader" style="width:12%;">Base</td>
-                        <td class="sheet-TableHeader" style="width:12%;">PerLvl</td>
+                        <td class="sheet-TableHeader" style="width:50%;">Name</td>
+                        <td class="sheet-TableHeader" style="width:10%;">Base</td>
+                        <td class="sheet-TableHeader" style="width:11%;">+Lvl</td>
                         <td class="sheet-TableHeader" style="width:14%;">Total</td>
+                        <td class="sheet-TableHeader" style="width:15%;">Roll</td>
                     </tr>
                 </table>
                 <table style="border: 1px solid grey;">
                     <tr>
                         <fieldset class="repeating_SECSK">
-                            <input float="left" type="text" style="width:60%;" name="attr_SECSK"><input float="left" type="number" style="width:13%;" name="attr_SECSKp" value=0><input float="left" type="number" style="width:13%;" name="attr_SECSKpl" value = 0><input float="left" type="text" style="width:14%;" name="attr_SECT" value="@{SECSKp}+(@{SECSKpl}*(@{Level}-1))+@{IQmax}" disabled="true">
+                            <input float="left" type="text" style="width:50%;" name="attr_SECSK"><input float="left" type="number" style="width:10%;" name="attr_SECSKp" value=0><input float="left" type="number" style="width:11%;" name="attr_SECSKpl" value = 0><input float="left" type="text" style="width:14%;" name="attr_SECT" value="@{SECSKp}+(@{SECSKpl}*(@{Level}-1))+@{IQmax}" disabled="true"><button type='roll' style="width:8%;" value='@{SECSK} check (@{SECT})\nResult: [[1d100]]' name='roll_SECSK'/>
                         </fieldset>
                     </tr>
                 </table>
